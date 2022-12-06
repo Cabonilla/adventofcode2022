@@ -41,7 +41,6 @@ def removeCargo(dict, place, amount, to):
 
 for m in movements:
 	tasks = [int(i) for i in m.split(' ') if i.isdigit()]
-	print(tasks)
 	removeCargo(schem_dict, tasks[1], tasks[0], tasks[2])
 
 last_crate = ''
