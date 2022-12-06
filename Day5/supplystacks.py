@@ -27,11 +27,18 @@ for r in range(schem_values_rows):
 			else:
 				schem_dict[place].append(schem_values[r][c])
 
+# Answer Part I
+# def removeCargo(dict, place, amount, to):
+# 	temp_cargo = dict[f'{place}'][len(dict[f'{place}']) - amount:]
+# 	dict[f'{place}'] = dict[f'{place}'][:len(dict[f'{place}']) - amount]
+# 	dict[f'{to}'].extend(temp_cargo[::-1])
+
+# Answer Part II
 def removeCargo(dict, place, amount, to):
 	temp_cargo = dict[f'{place}'][len(dict[f'{place}']) - amount:]
 	dict[f'{place}'] = dict[f'{place}'][:len(dict[f'{place}']) - amount]
-	dict[f'{to}'].extend(temp_cargo[::-1])
-		
+	dict[f'{to}'].extend(temp_cargo)	
+
 for m in movements:
 	tasks = [int(i) for i in m.split(' ') if i.isdigit()]
 	print(tasks)
